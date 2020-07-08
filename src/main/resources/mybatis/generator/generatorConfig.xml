@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "https://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <!-- 数据库驱动:选择你的本地硬盘上面的数据库驱动包-->
+    <classPathEntry  location="/tool/lib/mysql-connector-java-5.1.34.jar"/>
+    <context id="xunbao" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <!--不生成mybatis注释-->
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <!--数据库链接URL，用户名、密码 -->
+        <!--<jdbcConnection driverClass="com.mysql.jdbc.Driver"-->
+                        <!--connectionURL="jdbc:mysql://it721.net:3306/sampledb?useUnicode=true&amp;characterEncoding=utf-8"-->
+                        <!--userId="sampledb"-->
+                        <!--password="123456" />-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/xunbao?useUnicode=true&amp;characterEncoding=utf-8"
+                        userId="root"
+                        password="123456" />
+        <!--<javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>-->
+        <!-- 生成模型的包名和位置-->
+        <javaModelGenerator targetPackage="com.yijianya.xunbao.dao.mybatis.model" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+        <!-- 生成映射文件的包名和位置-->
+        <sqlMapGenerator targetPackage="mybatis.mapper.xunbao.origin" targetProject="src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+        <!-- 生成DAO的包名和位置-->
+        <!--<javaClientGenerator type="XMLMAPPER" targetPackage="com.xinzhen.crm.dao.mapper" targetProject="${mbg.targetProjectRoot}/src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>-->
+        <!-- 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名-->
+        <!--<table tableName="user" domainObjectName="User"></table>
+        <table tableName="user_area" domainObjectName="UserArea"></table>
+        <table tableName="user_asset" domainObjectName="UserAsset"></table>
+        <table tableName="user_bank_card" domainObjectName="UserBankCard"></table>
+        <table tableName="user_base_info" domainObjectName="UserBaseInfo"></table>
+        <table tableName="user_blacklist" domainObjectName="UserBlackList"></table>
+        <table tableName="user_company_info" domainObjectName="UserCompanyInfo"></table>
+        <table tableName="user_contacts" domainObjectName="UserContacts"></table>
+        <table tableName="user_credit" domainObjectName="UserCredit"></table>
+        <table tableName="user_device" domainObjectName="UserDevice"></table>
+        <table tableName="user_education_experience" domainObjectName="UserEducationExperience"></table>
+        <table tableName="user_freeze" domainObjectName="UserFreeze"></table>
+        <table tableName="user_identification" domainObjectName="UserIdentification"></table>
+        <table tableName="user_identify" domainObjectName="UserIdentify"></table>
+        <table tableName="user_login_log" domainObjectName="UserLoginLog"></table>
+        <table tableName="user_password" domainObjectName="UserPassword"></table>
+        <table tableName="user_password_security" domainObjectName="UserPasswordSecurity"></table>
+        <table tableName="user_phone_book" domainObjectName="UserPhoneBook"></table>
+        <table tableName="user_preference" domainObjectName="UserPreference"></table>
+        <table tableName="user_risk" domainObjectName="UserRisk"></table>
+        <table tableName="user_tpp_account" domainObjectName="UserTppAccount"></table>
+        <table tableName="user_tpp_account_data" domainObjectName="UserTppAccountData"></table>
+        <table tableName="user_works_experience" domainObjectName="UserWorksExperience"></table>
+        <table tableName="v_user_list" domainObjectName="UserListView"></table>-->
+
+        <!--
+        <table tableName="customer_service_consultation" domainObjectName="CustomerServiceConsultation"></table>
+        <table tableName="customer_service_consultation_handle" domainObjectName="CustomerServiceConsultationHandle"></table>
+        <table tableName="knowledge_base" domainObjectName="KnowledgeBase"></table>
+        <table tableName="customer_service_agent_relation" domainObjectName="CustomerServiceAgentRelation"></table>
+        <table tableName="customer_service_user_relation" domainObjectName="CustomerServiceUserRelation"></table>
+        <table tableName="customer_service_agent_relation" domainObjectName="CustomerServiceAgentRelation"></table>
+
+        <table tableName="cif_user_contacts" domainObjectName="CifUserContacts"></table>
+        <table tableName="cif_user_identify" domainObjectName="CifUserIdentify"></table>
+        <table tableName="ams_account_deposit" domainObjectName="AmsAccountDeposit"></table>
+        <table tableName="cif_user_identification" domainObjectName="CifUserIdentification"></table>
+        <table tableName="cif_user_freeze" domainObjectName="CifUserFreeze"></table>
+        -->
+        <table tableName="theme_table" domainObjectName="ThemeTable"></table>
+        <!--<table tableName="user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+    </context>
+    <!--<context id="XINZHEN_AMS" targetRuntime="MyBatis3">-->
+        <!--<commentGenerator>-->
+            <!--&lt;!&ndash;不生成mybatis注释&ndash;&gt;-->
+            <!--<property name="suppressAllComments" value="true"/>-->
+        <!--</commentGenerator>-->
+        <!--&lt;!&ndash;数据库链接URL，用户名、密码 &ndash;&gt;-->
+        <!--<jdbcConnection driverClass="com.mysql.jdbc.Driver"-->
+                        <!--connectionURL="jdbc:mysql://10.0.10.233:3306/xinzhen_ams?useUnicode=true&amp;characterEncoding=utf-8"-->
+                        <!--userId="dev"-->
+                        <!--password="Yvti3yZ8U9tmcCkQdRFA" />-->
+        <!--&lt;!&ndash;<javaTypeResolver>-->
+            <!--<property name="forceBigDecimals" value="false"/>-->
+        <!--</javaTypeResolver>&ndash;&gt;-->
+        <!--&lt;!&ndash; 生成模型的包名和位置&ndash;&gt;-->
+        <!--<javaModelGenerator targetPackage="com.xinzhen.crm.dao.mybatis.ams.model" targetProject="${mbg.targetProjectRoot}/src/main/java">-->
+            <!--<property name="enableSubPackages" value="true"/>-->
+            <!--<property name="trimStrings" value="true"/>-->
+        <!--</javaModelGenerator>-->
+        <!--&lt;!&ndash; 生成映射文件的包名和位置&ndash;&gt;-->
+        <!--<sqlMapGenerator targetPackage="mybatis.mapper.ams.origin" targetProject="${mbg.targetProjectRoot}/src/main/resources">-->
+            <!--<property name="enableSubPackages" value="true"/>-->
+        <!--</sqlMapGenerator>-->
+        <!--&lt;!&ndash; 生成DAO的包名和位置&ndash;&gt;-->
+        <!--&lt;!&ndash;<javaClientGenerator type="XMLMAPPER" targetPackage="com.xinzhen.crm.dao.mapper" targetProject="${mbg.targetProjectRoot}/src/main/java">-->
+            <!--<property name="enableSubPackages" value="true"/>-->
+        <!--</javaClientGenerator>&ndash;&gt;-->
+        <!--&lt;!&ndash; 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名&ndash;&gt;-->
+        <!--&lt;!&ndash;<table tableName="ifaes_money_fund_invest" domainObjectName="IfaesMoneyFundInvest"></table>&ndash;&gt;-->
+    <!--</context>-->
+
+    <!--<context id="XINZHEN_CIF" targetRuntime="MyBatis3">-->
+        <!--<commentGenerator>-->
+            <!--&lt;!&ndash;不生成mybatis注释&ndash;&gt;-->
+            <!--<property name="suppressAllComments" value="true"/>-->
+        <!--</commentGenerator>-->
+        <!--&lt;!&ndash;数据库链接URL，用户名、密码 &ndash;&gt;-->
+        <!--<jdbcConnection driverClass="com.mysql.jdbc.Driver"-->
+                        <!--connectionURL="jdbc:mysql://10.0.10.233:3306/xinzhen_cif?useUnicode=true&amp;characterEncoding=utf-8"-->
+                        <!--userId="dev"-->
+                        <!--password="Yvti3yZ8U9tmcCkQdRFA" />-->
+        <!--&lt;!&ndash;<javaTypeResolver>-->
+            <!--<property name="forceBigDecimals" value="false"/>-->
+        <!--</javaTypeResolver>&ndash;&gt;-->
+        <!--&lt;!&ndash; 生成模型的包名和位置&ndash;&gt;-->
+        <!--<javaModelGenerator targetPackage="com.xinzhen.crm.dao.mybatis.cif.model" targetProject="${mbg.targetProjectRoot}/src/main/java">-->
+            <!--<property name="enableSubPackages" value="true"/>-->
+            <!--<property name="trimStrings" value="true"/>-->
+        <!--</javaModelGenerator>-->
+        <!--&lt;!&ndash; 生成映射文件的包名和位置&ndash;&gt;-->
+        <!--<sqlMapGenerator targetPackage="mybatis.mapper.cif.origin" targetProject="${mbg.targetProjectRoot}/src/main/resources">-->
+            <!--<property name="enableSubPackages" value="true"/>-->
+        <!--</sqlMapGenerator>-->
+        <!--&lt;!&ndash; 生成DAO的包名和位置&ndash;&gt;-->
+        <!--&lt;!&ndash;<javaClientGenerator type="XMLMAPPER" targetPackage="com.xinzhen.crm.dao.mapper" targetProject="${mbg.targetProjectRoot}/src/main/java">-->
+            <!--<property name="enableSubPackages" value="true"/>-->
+        <!--</javaClientGenerator>&ndash;&gt;-->
+        <!--&lt;!&ndash; 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名&ndash;&gt;-->
+        <!--&lt;!&ndash;<table tableName="ifaes_money_fund_invest" domainObjectName="IfaesMoneyFundInvest"></table>&ndash;&gt;-->
+    <!--</context>-->
+</generatorConfiguration>
